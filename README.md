@@ -18,7 +18,7 @@ Run ```bash ng serve ``` for a dev server. Navigate to ```bash http://localhost:
 ## Note: 
 This project is live on Heroku. So, please visit the link below and see the demo app.
 
-Heroku Link:  [Covid19-app](https://mycovid19.herokuapp.com/home)
+Heroku Link:  [Angular-app-covid19-app](https://mycovid19.herokuapp.com/home)
 
 
 ## Contributing
