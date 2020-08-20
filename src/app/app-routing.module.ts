@@ -13,15 +13,15 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 //3rd step
 //Register ALL Routes here
 const routes: Routes = [
-  { path: "home", component: HomeComponent },
+  { path: "", component: HomeComponent },
   { path: "about", component: AboutComponent },
   { path: "contact", component: ContactComponent },
   { path: "products", component: ProductsComponent },
   { path: "students", component: StudentsComponent },
   { path: "posts", component: PostsComponent },
 
-  { path: "404", component: PageNotFoundComponent },
-  { path: "**", redirectTo: "404" }, // Wildcard route for a 404 page
+  { path: "page-not-found.component", component: PageNotFoundComponent },
+  { path: "**", redirectTo: "page-not-found.component" }, // Wildcard route for a 404 page
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
