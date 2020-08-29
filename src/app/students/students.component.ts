@@ -8,12 +8,49 @@ import { StudentsService } from "./../services/students.service";
 })
 export class StudentsComponent implements OnInit {
   title: string = "Students List";
+
+  //Data biding
+
+  firstname: string = "Data Biding value";
+  image = "https://placekitten.com/80/80";
+
+  //Dta biding
+  months = [
+    "January",
+    "Feburary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  name: string = "Mahmoud Osman";
+  //On click change names
+  changeName() {
+    this.name = "John Doe";
+  }
+
+  //Date
+
+  currentDate: Date = new Date();
+
   //get all students here
   students: any[];
 
   constructor(studentsService: StudentsService) {
     //getStudents() function is comming from the [student.service.ts] Service class
     this.students = studentsService.getStudents();
+  }
+
+  //Property binding
+  isDisabled() {
+    let isDisabled: boolean = true;
   }
 
   ngOnInit(): void {}

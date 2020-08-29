@@ -1,5 +1,8 @@
-<section class="container">
+<section class="container" style="height: 3500px;">
   <h1 class="text-info">{{title}}</h1>
+  <p class="text-right">
+    <b class="text-danger">Today's Date: </b> {{currentDate | date}}
+  </p>
   <hr />
   <div class="table-responsive">
     <table class="table">
@@ -15,4 +18,60 @@
       </tbody>
     </table>
   </div>
+  <br />
+  <br />
+  <hr />
+  <div class="well">
+    <h3>
+      Angular provides four types of data binding and they are different on the
+      way of data flowing.
+    </h3>
+    <ul>
+      <li>String Interpolation</li>
+      <li>Property Binding</li>
+      <li>Event Binding</li>
+      <li>Two-way binding</li>
+    </ul>
+  </div>
+  <h3 class="text-danger">
+    Angular Data Model - <small>One way biding</small>
+  </h3>
+  <p>
+    <small
+      >This method allows you to bind data from component to view or from view
+      to the component.</small
+    >
+  </p>
+  <p ng-bind="firstname"></p>
+  <p>{{firstname}}</p>
+  <hr />
+  <select class="form-control">
+    <option *ngFor="let month of months">{{month}}</option>
+  </select>
+  <hr />
+  <h3 class="text-danger">The ng-model Directive</h3>
+  <input value="{{ name }}" /> value="{{ name }}" <br /><b>OR </b> <br />
+  <input [value]="name" /> [value]="name"] <br />
+  <br />
+  <button (click)="changeName()" class="btn btn-primary">Change Names</button>
+  <small>Event Binding </small>
+  <hr />
+  <h3 class="text-info">
+    Property Binding - <small>One-way Data Binding </small>
+  </h3>
+  <button [disabled]="isDisabled">Disable Button</button>
+  <hr />
+  <b>Image Data Binding</b>
+  <div><img src="{{image}}" /></div>
+  <hr />
+  <br />
+  <br />
+  <h3 class="text-danger">ngIf Directive</h3>
+  <hr />
+  <p *ngIf="80 > 22; else notTrue">
+    80 is greate than 22
+  </p>
+  <ng-template #notTrue>
+    Else condition is ran
+  </ng-template>
 </section>
