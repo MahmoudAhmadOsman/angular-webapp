@@ -1,0 +1,9 @@
+#all-products img {
+  min-height: 200px;
+  object-fit: cover;
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+}
+#all-products img:hover {
+  transform: scale(1.1, 1.1);
+}

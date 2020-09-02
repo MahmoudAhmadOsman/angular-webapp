@@ -13,19 +13,23 @@ export class ProductsComponent implements OnInit {
   products = [
     {
       id: 1,
-      name: "Frozen Beaf",
+      name: "Asus' ROG Zephyrus Duo",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 870.0,
+      was: 985.55,
       quantity: 4754,
+      imageURL: "assets/images/asus.png",
     },
     {
       id: 2,
-      name: "Rustic Chicken",
+      name: "HP Store Netbook",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 602.0,
+      was: 785.55,
       quantity: 1558,
+      imageURL: "assets/images/hp-note.png",
     },
     {
       id: 3,
@@ -33,15 +37,19 @@ export class ProductsComponent implements OnInit {
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 649.0,
+      was: 735.59,
       quantity: 1566,
+      imageURL: "assets/images/laptop.png",
     },
     {
       id: 4,
-      name: "Refined Chair",
+      name: "OMEN Gaming 15 & 17 Laptop",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      price: 660.0,
+      price: 450.0,
+      was: 535.15,
       quantity: 4679,
+      imageURL: "assets/images/omen-hp.png",
     },
   ];
   toastr: any;
