@@ -1,4 +1,6 @@
+import { ProductsService } from "./../services/products.service";
 import { Component, OnInit } from "@angular/core";
+//import { ToastrService } from "ngx-toastr";
 
 @Component({
   selector: "app-products",
@@ -42,8 +44,24 @@ export class ProductsComponent implements OnInit {
       quantity: 4679,
     },
   ];
+  toastr: any;
+  ProductsService: any;
 
   constructor() {}
+
+  delete(product) {
+    let index = this.products.indexOf(product);
+    this.products.splice(index, 1);
+
+    this.ProductsService.deleteUser(product._id).subscribe(
+      (res) => {
+        this.toastr.error(res.message);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
+  }
 
   ngOnInit(): void {}
 }

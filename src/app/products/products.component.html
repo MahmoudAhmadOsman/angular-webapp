@@ -2,7 +2,7 @@
   <h1 class="text-danger">{{title}}</h1>
   <hr />
 
-  <div class="table-responsive">
+  <div class="table-responsive" *ngIf="products.length > 0; else notTrue">
     <table class="table table-hover">
       <thead>
         <tr>
@@ -14,9 +14,11 @@
           <th>Actions</th>
         </tr>
       </thead>
-      <tbody *ngFor="let product of products">
+      <tbody *ngFor="let product of products; let i =index">
+        <tr></tr>
         <tr>
-          <td>{{product.id}}</td>
+          <td>{{ i }}</td>
+          <!-- <td>{{product.id}}</td> -->
           <td>
             <a href="/product/{{product.id}}"> {{product.name}}</a>
           </td>
@@ -33,7 +35,11 @@
             >
           </td>
           <td>
-            <a href="/product/{{product.id}}" class="btn btn-danger btn-sm">
+            <a
+              href="/product/{{product.id}}"
+              class="btn btn-danger btn-sm"
+              (click)="delete(product)"
+            >
               <i class="fa fa-trash"></i>&nbsp; <b> Delete</b></a
             >
           </td>
@@ -41,4 +47,8 @@
       </tbody>
     </table>
   </div>
+
+  <ng-template #notTrue class="alert alert-warning">
+    <div class="alert alert-warning text-center h3">No products found!</div>
+  </ng-template>
 </section>
