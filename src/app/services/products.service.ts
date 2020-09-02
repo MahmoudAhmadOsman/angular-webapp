@@ -9,6 +9,7 @@ export class ProductsService {
   constructor(private http: HttpClientModule) {}
 
   deleteUser(id: String) {
-    return this.http.delete<any>(this.deleteUserUrl, id);
+    //  return this.http.delete<any>(this.deleteUserUrl+id);
+    // return this.http.delete<any>(this.deleteUserUrl, id);
   }
 }
