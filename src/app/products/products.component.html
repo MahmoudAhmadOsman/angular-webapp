@@ -3,58 +3,12 @@
   <hr />
   <br />
 
-  <div class="table-responsive" *ngIf="products.length > 0; else notTrue">
-    <table class="table table-hover" style="display: none;">
-      <thead>
-        <tr>
-          <th>Product ID</th>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody *ngFor="let product of products; let i =index">
-        <tr></tr>
-        <tr>
-          <td>{{ i }}</td>
-          <!-- <td>{{product.id}}</td> -->
-          <td>
-            <a href="/product/{{product.id}}"> {{product.name}}</a>
-          </td>
-          <td>{{product.description}}</td>
-          <td>${{product.price}}</td>
-          <td>{{product.quantity}}</td>
-          <td>
-            <a
-              href="/product/{{product.id}}"
-              class="btn btn-info btn-sm"
-              style="margin-right: 6px;"
-            >
-              <i class="fa fa-edit"></i> &nbsp; <b> Edit</b></a
-            >
-          </td>
-          <td>
-            <a
-              href="/product/{{product.id}}"
-              class="btn btn-danger btn-sm"
-              (click)="delete(product)"
-            >
-              <i class="fa fa-trash"></i>&nbsp; <b> Delete</b></a
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
   <ng-template #notTrue class="alert alert-warning">
     <div class="alert alert-warning text-center h3">No products found!</div>
   </ng-template>
 
   <!-- Start of bs thumbnail card -->
-  <div class="row">
+  <div class="row" *ngIf="products.length > 0; else notTrue">
     <div class="col-md-4" *ngFor="let product of products; let i =index">
       <div class="thumbnail">
         <img src="{{product.imageURL}}" alt="{{product.name}}" />
@@ -94,5 +48,9 @@
       </div>
     </div>
   </div>
+
+  <ng-template #notTrue class="alert alert-warning">
+    <div class="alert alert-warning text-center h3">No products found!</div>
+  </ng-template>
   <!-- Start of bs thumbnail card -->
 </section>
