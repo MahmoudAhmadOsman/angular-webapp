@@ -4,7 +4,7 @@
       <h1 class="text-info">Contact Me</h1>
       <hr />
       <br />
-      <form accept="#" method="POST">
+      <form #validateForm="ngForm" action="#" method="POST">
         <div class="form-group">
           <label for="name">Full Name</label>
           <!-- create templage variable called #fullName -->
@@ -98,7 +98,11 @@
           </p>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block">
+        <button
+          type="submit"
+          class="btn btn-primary btn-block"
+          [disabled]="!validateForm.valid"
+        >
           <b>SUBMIT</b>
         </button>
       </form>
