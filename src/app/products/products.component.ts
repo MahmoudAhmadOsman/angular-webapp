@@ -1,5 +1,7 @@
 import { ProductsService } from "./../services/products.service";
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
+
 //import { ToastrService } from "ngx-toastr";
 
 @Component({
@@ -43,7 +45,7 @@ export class ProductsComponent implements OnInit {
     },
     {
       id: 4,
-      name: "OMEN Gaming 15 & 17 Laptop",
+      name: "OMEN Gaming 15,17 Laptop",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       price: 450.0,
@@ -55,8 +57,9 @@ export class ProductsComponent implements OnInit {
   toastr: any;
   ProductsService: any;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
+  //Delete a product
   delete(product) {
     let index = this.products.indexOf(product);
     this.products.splice(index, 1);
@@ -70,6 +73,19 @@ export class ProductsComponent implements OnInit {
       }
     );
   }
+
+
+//Get product by id
+showProductDetails(product){
+  this.router.navigate(['/products', product.id])
+
+}
+
+
+
+
+
+
 
   ngOnInit(): void {}
 }

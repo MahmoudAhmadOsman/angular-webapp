@@ -13,7 +13,8 @@ import { ProductsComponent } from "./products/products.component";
 import { StudentsComponent } from "./students/students.component";
 import { FormsModule } from "@angular/forms";
 import { PostsComponent } from "./posts/posts.component";
-import { FooterComponent } from './footer/footer.component'; // for Template Driven Form Module
+import { FooterComponent } from './footer/footer.component';
+import { ProductDetailsComponent } from './product-details/product-details.component'; // for Template Driven Form Module
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FooterComponent } from './footer/footer.component'; // for Template Dri
     StudentsComponent,
     PostsComponent,
     FooterComponent,
+    ProductDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

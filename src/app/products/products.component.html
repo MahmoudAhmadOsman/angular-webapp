@@ -16,25 +16,26 @@
           <h3 class="list-group-item">{{product.name}}</h3>
           <p class="list-group-item">{{product.description}}</p>
           <p class="list-group-item">
-            <b>Price:</b
-            ><span class="text-info"> &nbsp;${{product.price}}</span> &nbsp;
-            &nbsp; &nbsp;
-            <i> Was </i>
+            <b>Price:</b>
+            &nbsp;
+            <i> </i>
             <s class="text-danger"> {{product.was}}</s>
+
+            <span class="text-info"> &nbsp;${{product.price}}</span> &nbsp;
           </p>
           <p class="list-group-item">
             <b>Quantity:</b> {{product.quantity}}
             <small class="text-muted"> &nbsp;In Stock</small>
           </p>
           <p style="margin-top: 15px;">
-            <a
-              href="/product/{{product.id}}"
+            <button
               class="btn btn-info btn-sm"
               role="button"
               style="margin-right: 6px;"
+              (click)="showProductDetails(product)"
             >
-              <i class="fa fa-edit"></i> &nbsp; <b> Edit</b>
-            </a>
+              <i class="fa fa-eye"></i> &nbsp; <b> View</b>
+            </button>
             <a
               href="/product/{{product.id}}"
               class="btn btn-danger btn-sm"

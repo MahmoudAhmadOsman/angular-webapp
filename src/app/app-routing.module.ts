@@ -1,3 +1,4 @@
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { PostsComponent } from "./posts/posts.component";
 import { StudentsComponent } from "./students/students.component";
 import { ProductsComponent } from "./products/products.component";
@@ -17,8 +18,10 @@ const routes: Routes = [
   { path: "about", component: AboutComponent },
   { path: "contact", component: ContactComponent },
   { path: "products", component: ProductsComponent },
+    { path: "products/:id", component: ProductDetailsComponent },
   { path: "students", component: StudentsComponent },
   { path: "posts", component: PostsComponent },
+   { path: '**', redirectTo: '/', pathMatch: 'full' },
 
   { path: "**", component: PageNotFoundComponent },
 ];
