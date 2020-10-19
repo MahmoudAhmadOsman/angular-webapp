@@ -9,12 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  //2
+  //2.
   public productId;
   constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
-    //1
+    //1.
     //Now read the paramter using ActivatedRoute
     let id = parseInt(this.router.snapshot.paramMap.get("id"));
     this.productId = id;

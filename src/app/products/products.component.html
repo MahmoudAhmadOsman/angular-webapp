@@ -32,7 +32,7 @@
               class="btn btn-info btn-sm"
               role="button"
               style="margin-right: 6px;"
-              (click)="showProductDetails(product)"
+              (click)="showProductDetails(product.id)"
             >
               <i class="fa fa-eye"></i> &nbsp; <b> View</b>
             </button>
@@ -40,7 +40,7 @@
               href="/product/{{product.id}}"
               class="btn btn-danger btn-sm"
               role="button"
-              (click)="delete(product)"
+              (click)="delete(product.id)"
             >
               <i class="fa fa-trash"></i>&nbsp; <b> Delete</b>
             </a>

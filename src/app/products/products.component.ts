@@ -76,8 +76,8 @@ export class ProductsComponent implements OnInit {
 
 
 //Get product by id
-showProductDetails(product){
-  this.router.navigate(['/products', product.id])
+showProductDetails(product: number){
+  this.router.navigate(['/product-details', product])
 
 }
 
