@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor() {
     //Return or show  name in the home component
-    // gitName(){
+    // getName(){
     //   return this.myName;
     // }
   }
