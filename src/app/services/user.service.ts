@@ -26,13 +26,7 @@ return throwError(error.message || "Servver error occurred")
 }
 
 
-
-
-
-
 }
 
 
-//  .catch((error)=>{
-//     return Observable.throw(error);
-//   })
+ 
