@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+
 import { ActivatedRoute } from '@angular/router';
  import { Component, OnInit } from '@angular/core';
   
@@ -11,7 +13,8 @@ export class ProductDetailsComponent implements OnInit {
 
   //2.
   public productId;
-  constructor(private router: ActivatedRoute) { }
+  constructor(private router: ActivatedRoute, private route: Router) { }
+
 
   ngOnInit(): void {
     //1.
@@ -21,6 +24,10 @@ export class ProductDetailsComponent implements OnInit {
   
   }
 
+//VIEW Show Product Details
+// showProductDetails(id: number){
+// this.route.navigate(['product-details', id]);
+// }
 
 
 }

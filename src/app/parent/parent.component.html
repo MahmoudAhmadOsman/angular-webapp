@@ -8,10 +8,18 @@
           Pass data from Parent Component to Child Component!
         </p>
         <hr />
+        <!-- Display here the data that is coming from the Child Component inside jumbotron class -->
+        <div class="jumbotron">
+          <p class="text-danger">{{childData}}</p>
+        </div>
+        <hr />
 
         <!-- Display here Child Component -->
         <!-- Bind the parent data to the child -->
-        <app-child [parentTitle]="parentTitleName"></app-child>
+        <app-child
+          [parentTitle]="parentTitleName"
+          (childTitleName)="parentMethod($event)"
+        ></app-child>
       </div>
     </div>
   </div>

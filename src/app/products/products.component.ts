@@ -57,7 +57,7 @@ export class ProductsComponent implements OnInit {
   toastr: any;
   ProductsService: any;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: Router) {}
 
   //Delete a product
   delete(product) {
@@ -75,11 +75,13 @@ export class ProductsComponent implements OnInit {
   }
 
 
-//Get product by id
-showProductDetails(product: number){
-  this.router.navigate(['/product-details', product])
-
+ 
+//VIEW Show Product Details
+showProductDetails(id: number){
+ this.route.navigate(['product-details', id]);
 }
+
+
 
 
 

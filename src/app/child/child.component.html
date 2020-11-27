@@ -2,5 +2,13 @@
   <div class="container">
     <h4>Th data below is coming from the parent component!</h4>
     <p>{{parentTitle}}</p>
+
+    <hr />
+    <br />
+    <p><b>This button is coming from Child Component</b></p>
+    <button class="btn btn-primary" (click)="passDataToParent()">
+      Show Child Data
+    </button>
+    <hr />
   </div>
 </section>

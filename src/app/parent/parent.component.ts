@@ -12,7 +12,17 @@ parentTitleName:string = "A title coming from Parent Component";
 
   constructor() { }
 
+
+//Get data from Child Component
+childData:string;
+parentMethod(data){
+this.childData = data;
+//Now you can use or bind the childData inside the Parent Component 
+}
+
   ngOnInit(): void {
   }
+
+
 
 }
