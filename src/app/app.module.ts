@@ -17,7 +17,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CountriesComponent } from './countries/countries.component';
 import { ParentComponent } from './parent/parent.component';
-import { ChildComponent } from './child/child.component'; // for Template Driven Form Module
+import { ChildComponent } from './child/child.component';
+import { UsersComponent } from './users/users.component'; // for Template Driven Form Module
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ChildComponent } from './child/child.component'; // for Template Driven
     CountriesComponent,
     ParentComponent,
     ChildComponent,
+    UsersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 
