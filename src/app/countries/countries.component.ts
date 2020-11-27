@@ -13,7 +13,7 @@ export class CountriesComponent implements OnInit {
 countries:any[] = [
     {code:"so", country: "Somalia"},
     {code:"usa", country: "United States"},
-    {code:"uk", country: "United Kinddom"},
+    {code:"uk", country: "United Kingdom"},
     {code:"ca", country: "Canada"},
     {code:"au", country: "Australia"},
 
