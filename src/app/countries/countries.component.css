@@ -1,0 +1,10 @@
+.list__of__countries{
+    position: relative;
+}
+.list__of__countries .ng__if__list{
+    position: relative;
+    margin-bottom: 8px;
+}
+.list__of__countries .ng__if__list h4 {
+    color: #f00;
+}

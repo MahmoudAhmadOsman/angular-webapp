@@ -1,0 +1,58 @@
+<div class="list__of__countries">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 ng__if__list">
+        <h3 class="text-info">Angular ngSwitch Directive</h3>
+        <hr />
+        <small class="text-muted">Please, select a country!</small>
+
+        <select
+          class="form-control"
+          (change)="countryChoices($event.target.value)"
+        >
+          <option>Select a Country</option>
+          <option
+            *ngFor="let countryList of countries"
+            [value]="countryList.code"
+          >
+            {{countryList.country}}
+          </option>
+        </select>
+        <!-- <p>{{selectedCoutry}}</p> -->
+      </div>
+
+      <!-- Appy ngswithc directive now -->
+      <div [ngSwitch]="selectedCoutry">
+        <!-- Somalia -->
+        <div *ngSwitchCase="'so'" class="text-info">
+          <h4>Somalia Calling Code is: +2526</h4>
+        </div>
+
+        <!-- USA -->
+        <div *ngSwitchCase="'usa'" class="text-info">
+          <h4>USA Calling Code is: +1</h4>
+        </div>
+
+        <!-- UK -->
+        <div *ngSwitchCase="'uk'" class="text-info">
+          <h4>UK Calling Code is: +1</h4>
+        </div>
+        <!-- Australia -->
+        <div *ngSwitchCase="'au'" class="text-info">
+          <h4>Australia Calling Code is: +61</h4>
+        </div>
+
+        <!-- Canada -->
+        <div *ngSwitchCase="'ca'" class="text-info">
+          <h4>Canada Calling Code is: +1</h4>
+        </div>
+
+        <!--Default -->
+        <div *ngSwitchDefault class="text-muted">
+          <p>Please select a country to know the calling code.</p>
+        </div>
+        <!-- ========End of ngSwitchCase============= -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -14,7 +14,10 @@ import { StudentsComponent } from "./students/students.component";
 import { FormsModule } from "@angular/forms";
 import { PostsComponent } from "./posts/posts.component";
 import { FooterComponent } from './footer/footer.component';
-import { ProductDetailsComponent } from './product-details/product-details.component'; // for Template Driven Form Module
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CountriesComponent } from './countries/countries.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component'; // for Template Driven Form Module
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     PostsComponent,
     FooterComponent,
     ProductDetailsComponent,
+    CountriesComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

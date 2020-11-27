@@ -1,3 +1,5 @@
+import { ParentComponent } from './parent/parent.component';
+import { CountriesComponent } from './countries/countries.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { PostsComponent } from "./posts/posts.component";
 import { StudentsComponent } from "./students/students.component";
@@ -21,6 +23,8 @@ const routes: Routes = [
     { path: "product-details/:id", component: ProductDetailsComponent },
   { path: "students", component: StudentsComponent },
   { path: "posts", component: PostsComponent },
+  {path:"countries", component: CountriesComponent},
+  {path:"parent", component: ParentComponent},
    { path: '**', redirectTo: '/', pathMatch: 'full' },
 
   { path: "**", component: PageNotFoundComponent },
