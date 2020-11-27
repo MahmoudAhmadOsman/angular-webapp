@@ -11,14 +11,20 @@ export class UsersComponent implements OnInit {
   title:string ="Users List";
 
   //Users array
-  users:any;
+  users:any= [];
+
+  //display an Error if something goes wrong
+  errorMessage:string ="Loading...";
+
+
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
     this.userService.getAllUsers().subscribe((data)=>{
       this.users = data;
-
-    });
+    },(err)=>{
+      this.errorMessage = "An internal error has occurred while fetching data from the Users API";
+    } );
   }
 
 }

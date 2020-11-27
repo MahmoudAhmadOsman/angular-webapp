@@ -11,42 +11,49 @@
 
     <!-- start or thumbnail -->
     <div class="row">
-      <h1 class="text-success">{{title}}</h1>
-      <hr />
+      <!-- If there is no error then display this -->
+      <div *ngIf="users.length>0; else noUsersData">
+        <h1 class="text-success">{{title}}</h1>
+        <hr />
+        <div class="col-sm-6 col-md-4" *ngFor="let user of users; let i =index">
+          <div class="thumbnail">
+            <img
+              src="https://placeimg.com/640/480/people"
+              alt="{{user.name}}"
+            />
+            <div class="caption">
+              <h3>{{user.name}}</h3>
+              <small class="badge badge-info pull-right"># {{i + 1}}</small>
+              <hr />
+              <p><b>Email: </b>{{user.email}}</p>
+              <hr />
+              <p><b>Address: </b> {{user.address.street}}</p>
+              <hr />
+              <p><b>City: </b> {{user.address.city}}</p>
+              <hr />
+              <p><b>Zip Code: </b> {{user.address.zipcode}}</p>
+              <hr />
 
-      <div class="col-sm-6 col-md-4" *ngFor="let user of users; let i =index">
-        <div class="thumbnail">
-          <img src="https://placeimg.com/640/480/people" alt="{{user.name}}" />
-          <div class="caption">
-            <h3>{{user.name}}</h3>
-            <small class="badge badge-info pull-right"># {{i + 1}}</small>
-            <hr />
-            <p><b>Email: </b>{{user.email}}</p>
-            <hr />
-            <p><b>Address: </b> {{user.address.street}}</p>
-            <hr />
-            <p><b>City: </b> {{user.address.city}}</p>
-            <hr />
-            <p><b>Zip Code: </b> {{user.address.zipcode}}</p>
-            <hr />
+              <p><b>Phone: </b> {{user.phone}}</p>
+              <hr />
+              <p>
+                <b>Website: </b> <a href="{{user.website}}">{{user.website}}</a>
+              </p>
 
-            <p><b>Phone: </b> {{user.phone}}</p>
-            <hr />
-            <p>
-              <b>Website: </b> <a href="{{user.website}}">{{user.website}}</a>
-            </p>
-
-            <hr />
-            <p><b>company: </b> {{user.company.name}}</p>
-            <hr />
-
-            <!-- <p>
-              <a href="#" class="btn btn-primary" role="button">Button</a>
-              <a href="#" class="btn btn-default" role="button">Button</a>
-            </p> -->
+              <hr />
+              <p><b>company: </b> {{user.company.name}}</p>
+              <hr />
+            </div>
           </div>
         </div>
       </div>
+      <!-- end of *ngif -->
+      <!-- Display error if there is an error -->
+      <ng-template #noUsersData>
+        <div class="alert alert-danger text-center">
+          {{errorMessage}}
+        </div>
+      </ng-template>
     </div>
     <!-- End or thumbnail -->
   </div>
