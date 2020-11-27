@@ -12,7 +12,7 @@ export class StudentsComponent implements OnInit {
   //Data biding
 
   firstname: string = "Data Biding value";
-  image = "https://placekitten.com/80/80";
+  image:string = "https://placekitten.com/80/80";
 
   //Dta biding
   months = [
@@ -36,15 +36,12 @@ export class StudentsComponent implements OnInit {
     this.name = "John Doe";
   }
 
-  //Date
-
+  //Date Pipe
   currentDate: Date = new Date();
 
   //get all students here
   students: any[];
-
   constructor(studentsService: StudentsService) {
-    //getStudents() function is comming from the [student.service.ts] Service class
     this.students = studentsService.getStudents();
   }
 

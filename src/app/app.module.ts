@@ -18,7 +18,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CountriesComponent } from './countries/countries.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
-import { UsersComponent } from './users/users.component'; // for Template Driven Form Module
+import { UsersComponent } from './users/users.component';
+import { AgePipe } from './piple/age.pipe'; // for Template Driven Form Module
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { UsersComponent } from './users/users.component'; // for Template Driven
     ParentComponent,
     ChildComponent,
     UsersComponent,
+    AgePipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
 

@@ -13,7 +13,6 @@ export class UserService {
   constructor(private http:HttpClient) { }
   
   //Get all users from remote serve
-     //URL = "https://jsonplaceholder.typicode.com/users";
   getAllUsers(){
     const url ="https://jsonplaceholder.typicode.com/users";
     return this.http.get(url)
@@ -22,7 +21,7 @@ export class UserService {
 
 //Create handleError function that handles error
 handleError(error){
-return throwError(error.message || "Servver error occurred")
+return throwError(error.message || "Server error occurred")
 }
 
 

@@ -5,15 +5,26 @@
   </p>
   <hr />
   <div class="table-responsive">
-    <table class="table">
+    <table class="table table-striped">
       <thead>
         <tr>
-          <th>Full Name</th>
+          <th>Student ID #</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>DOB</th>
+          <th>Salary</th>
+          <th>Age</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let student of students">
-          <td id="students">{{student}}</td>
+          <td>{{student.id}}</td>
+          <td>{{student.first_name}}</td>
+          <td>{{student.last_name}}</td>
+
+          <td>{{student.birthDate | date}}</td>
+          <td>{{student.salary | currency}}</td>
+          <td>{{student.birthDate | age}}</td>
         </tr>
       </tbody>
     </table>
